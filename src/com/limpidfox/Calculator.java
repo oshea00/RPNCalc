@@ -39,9 +39,14 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     	card.setAlpha(0);
         TextView display = (TextView) findViewById(R.id.display);
         display.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/HP97R.ttf"));
+        setButtonListeners();
     }
     
     public void btnPressed(View b)
+    {
+    }
+    
+    public void btnClicked(View b)
     {
     	int id = b.getId();
     	if (id==R.id.btnPgm)
@@ -53,7 +58,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         	processKeyInput(id);
     	}
         Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(50);
+        vibrator.vibrate(40);
     	setDisplay(_hp.GetDisplay());
     }
     
@@ -122,8 +127,8 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         					{
         						if (event.getAction()==MotionEvent.ACTION_DOWN)
         						{
-       							    btnPressed(v);
-       							    return true;
+       							    btnClicked(v);
+       							    return false;
         						}
         						return false;
         					}
