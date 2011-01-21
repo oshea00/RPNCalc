@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HP97Program xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IsProgram>true</IsProgram>
+  <IsHp97Program>false</IsHp97Program>
+  <Flags>
+    <boolean>true</boolean>
+    <boolean>false</boolean>
+    <boolean>false</boolean>
+    <boolean>true</boolean>
+  </Flags>
+  <Program>
+    <PgmInstruction Label="000" KeyCode1="" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBL0" KeyCode1="00" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="CLRG" KeyCode1="-53" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="P↕S" KeyCode1="-51" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="CLRG" KeyCode1="-53" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBLa" KeyCode1="11" KeyCode2="16" KeyCode3="21" />
+    <PgmInstruction Label="RND" KeyCode1="24" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RCLI" KeyCode1="46" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="X≠Y?" KeyCode1="-32" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="R/S" KeyCode1="51" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBL2" KeyCode1="02" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="*LBL5" KeyCode1="05" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="RCLI" KeyCode1="46" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBLc" KeyCode1="13" KeyCode2="16" KeyCode3="21" />
+    <PgmInstruction Label="RCL¡" KeyCode1="45" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="RCLI" KeyCode1="46" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="X≠Y?" KeyCode1="-32" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="R/S" KeyCode1="51" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="ST+0" KeyCode1="00" KeyCode2="-55" KeyCode3="35" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="GTOc" KeyCode1="13" KeyCode2="16" KeyCode3="22" />
+    <PgmInstruction Label="3" KeyCode1="03" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="EEX" KeyCode1="-23" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="2" KeyCode1="02" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="RCL0" KeyCode1="00" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="X≠Y?" KeyCode1="-32" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="R/S" KeyCode1="51" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBLe" KeyCode1="15" KeyCode2="16" KeyCode3="21" />
+    <PgmInstruction Label="1" KeyCode1="01" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="- " KeyCode1="-45" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBLA" KeyCode1="11" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="5" KeyCode1="05" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="7" KeyCode1="07" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSB0" KeyCode1="00" KeyCode2="23" KeyCode3="" />
+    <PgmInstruction Label="PSE" KeyCode1="51" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBe" KeyCode1="15" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="ENT↑" KeyCode1="-21" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="R↓" KeyCode1="-31" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="X↕Y" KeyCode1="-41" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="R↑" KeyCode1="-31" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="R↑" KeyCode1="-31" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="X↕Y" KeyCode1="-41" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="R↑" KeyCode1="-31" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="X≠0?" KeyCode1="-42" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="X≠Y?" KeyCode1="-32" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBe" KeyCode1="15" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="X&gt;Y?" KeyCode1="-34" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBe" KeyCode1="15" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="X=Y?" KeyCode1="-33" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBe" KeyCode1="15" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="X≤Y?" KeyCode1="-35" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GTO1" KeyCode1="01" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBL1" KeyCode1="01" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="GSBe" KeyCode1="15" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="STOI" KeyCode1="46" KeyCode2="35" KeyCode3="" />
+    <PgmInstruction Label="RCLI" KeyCode1="46" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="X↕Y" KeyCode1="-41" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="X≠Y?" KeyCode1="-32" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSB2" KeyCode1="02" KeyCode2="23" KeyCode3="" />
+    <PgmInstruction Label="X≠0?" KeyCode1="-42" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GTO3" KeyCode1="03" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBL3" KeyCode1="03" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="GSB2" KeyCode1="02" KeyCode2="23" KeyCode3="" />
+    <PgmInstruction Label="X=0?" KeyCode1="-43" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSB2" KeyCode1="02" KeyCode2="23" KeyCode3="" />
+    <PgmInstruction Label="X&lt;0?" KeyCode1="-45" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSB2" KeyCode1="02" KeyCode2="23" KeyCode3="" />
+    <PgmInstruction Label="X&gt;0?" KeyCode1="-44" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GTO4" KeyCode1="04" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="RTN" KeyCode1="24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="*LBL4" KeyCode1="04" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F2?" KeyCode1="02" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F1?" KeyCode1="01" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F3?" KeyCode1="03" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO6" KeyCode1="06" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="*LBL6" KeyCode1="06" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F0?" KeyCode1="00" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO7" KeyCode1="07" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="*LBL7" KeyCode1="07" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="SF2" KeyCode1="02" KeyCode2="21" KeyCode3="16" />
+    <PgmInstruction Label="SF1" KeyCode1="01" KeyCode2="21" KeyCode3="16" />
+    <PgmInstruction Label="CF0" KeyCode1="00" KeyCode2="22" KeyCode3="16" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F3?" KeyCode1="03" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F0?" KeyCode1="00" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F2?" KeyCode1="02" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO8" KeyCode1="08" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="*LBL8" KeyCode1="08" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F1?" KeyCode1="01" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO9" KeyCode1="09" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="*LBL9" KeyCode1="09" KeyCode2="21" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="F2?" KeyCode1="02" KeyCode2="23" KeyCode3="16" />
+    <PgmInstruction Label="GTO5" KeyCode1="05" KeyCode2="22" KeyCode3="" />
+    <PgmInstruction Label="GSB2" KeyCode1="02" KeyCode2="23" KeyCode3="" />
+    <PgmInstruction Label="DSP7" KeyCode1="07" KeyCode2="-63" KeyCode3="" />
+    <PgmInstruction Label="DEG" KeyCode1="-21" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="SIN" KeyCode1="41" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="SIN¹" KeyCode1="41" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="COS" KeyCode1="42" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="COS¹" KeyCode1="42" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="TAN" KeyCode1="43" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="TAN¹" KeyCode1="43" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="→P" KeyCode1="34" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="→R" KeyCode1="44" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="SIN" KeyCode1="41" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="→HMS" KeyCode1="35" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="HMS→" KeyCode1="36" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="SIN¹" KeyCode1="41" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="LOG" KeyCode1="32" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="10ª" KeyCode1="33" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="LN" KeyCode1="32" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="eª" KeyCode1="33" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="√X" KeyCode1="54" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="X²" KeyCode1="53" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="ENT↑" KeyCode1="-21" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="Yª" KeyCode1="31" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="LSTX" KeyCode1="-63" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="1/X" KeyCode1="52" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="Yª" KeyCode1="31" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="ENT↑" KeyCode1="-21" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="+ " KeyCode1="-55" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="LSTX" KeyCode1="-63" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="- " KeyCode1="-45" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="ENT↑" KeyCode1="-21" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="x " KeyCode1="-35" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="LSTX" KeyCode1="-63" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="÷ " KeyCode1="-24" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="√X" KeyCode1="54" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="FRC" KeyCode1="44" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="LSTX" KeyCode1="-63" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="INT" KeyCode1="34" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="+ " KeyCode1="-55" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="X²" KeyCode1="53" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="D→R" KeyCode1="45" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="R→D" KeyCode1="46" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="EEX" KeyCode1="-23" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="2" KeyCode1="02" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="X↕Y" KeyCode1="-41" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="% " KeyCode1="55" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="GSBa" KeyCode1="11" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="DSP1" KeyCode1="01" KeyCode2="-63" KeyCode3="" />
+    <PgmInstruction Label="*LBLb" KeyCode1="12" KeyCode2="16" KeyCode3="21" />
+    <PgmInstruction Label="RCLI" KeyCode1="46" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="STO¡" KeyCode1="45" KeyCode2="35" KeyCode3="" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="GTOb" KeyCode1="12" KeyCode2="16" KeyCode3="22" />
+    <PgmInstruction Label="2" KeyCode1="02" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="4" KeyCode1="04" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="X↕I" KeyCode1="-41" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GSBc" KeyCode1="13" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="GSB0" KeyCode1="00" KeyCode2="23" KeyCode3="" />
+    <PgmInstruction Label="*LBLd" KeyCode1="14" KeyCode2="16" KeyCode3="21" />
+    <PgmInstruction Label="DSZI" KeyCode1="46" KeyCode2="25" KeyCode3="16" />
+    <PgmInstruction Label="RCLI" KeyCode1="46" KeyCode2="36" KeyCode3="" />
+    <PgmInstruction Label="ABS" KeyCode1="31" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="STO¡" KeyCode1="45" KeyCode2="35" KeyCode3="" />
+    <PgmInstruction Label="2" KeyCode1="02" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="4" KeyCode1="04" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="X≠Y?" KeyCode1="-32" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="GTOd" KeyCode1="14" KeyCode2="16" KeyCode3="22" />
+    <PgmInstruction Label="STOI" KeyCode1="46" KeyCode2="35" KeyCode3="" />
+    <PgmInstruction Label="GSBc" KeyCode1="13" KeyCode2="16" KeyCode3="23" />
+    <PgmInstruction Label="9" KeyCode1="09" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="EEX" KeyCode1="-23" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="8" KeyCode1="08" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="7" KeyCode1="07" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="1/X" KeyCode1="52" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="8" KeyCode1="08" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="CHS" KeyCode1="-22" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="x " KeyCode1="-35" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="SF0" KeyCode1="00" KeyCode2="21" KeyCode3="16" />
+    <PgmInstruction Label="CF1" KeyCode1="01" KeyCode2="22" KeyCode3="16" />
+    <PgmInstruction Label="SF3" KeyCode1="03" KeyCode2="21" KeyCode3="16" />
+    <PgmInstruction Label="RAD" KeyCode1="-22" KeyCode2="16" KeyCode3="" />
+    <PgmInstruction Label="DSP3" KeyCode1="03" KeyCode2="-63" KeyCode3="" />
+    <PgmInstruction Label="ENG" KeyCode1="-13" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="PRTX" KeyCode1="-14" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="SCI" KeyCode1="-12" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="PRTX" KeyCode1="-14" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="DSP1" KeyCode1="01" KeyCode2="-63" KeyCode3="" />
+    <PgmInstruction Label="FIX" KeyCode1="-11" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="PRTX" KeyCode1="-14" KeyCode2="" KeyCode3="" />
+    <PgmInstruction Label="R/S" KeyCode1="51" KeyCode2="" KeyCode3="" />
+  </Program>
+  <AngleMode>Radians</AngleMode>
+  <DisplayMode>Fixed</DisplayMode>
+  <DisplaySize>1</DisplaySize>
+  <LabelA>START</LabelA>
+  <Labela />
+  <LabelB />
+  <Labelb />
+  <LabelC />
+  <Labelc />
+  <LabelD />
+  <Labeld>version</Labeld>
+  <LabelE />
+  <Labele>SD-15C</Labele>
+</HP97Program>

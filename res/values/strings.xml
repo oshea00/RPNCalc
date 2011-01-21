@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">RPNCalc</string><string name="display_value">0.00</string>
-  <string name="one">1</string>
+  <string name="app_name">HP67</string>
+  <string name="menu_load">Load Program</string>
+  <string name="menu_save">Save Program</string>
+  <string name="moon">Moon Lander.hp97</string>
+  <string name="sd15">SD15 Diagnostic.hp97</string>
 </resources>
