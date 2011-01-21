@@ -63,6 +63,7 @@ public final class R {
     }
     public static final class layout {
         public static final int main=0x7f030000;
+        public static final int pgmlist=0x7f030001;
     }
     public static final class raw {
         public static final int moon=0x7f040000;

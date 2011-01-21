@@ -2,6 +2,7 @@ package com.limpidfox;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import java.util.*;
 import android.os.Bundle;
@@ -19,13 +20,16 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Button;
 import java.io.*;
+
 import android.content.res.*;
 
 public class Calculator extends Activity implements IDisplayUpdateHandler 
 {
+    private static final int ACTIVITY_PGMLIST=0;
     private static final int LOAD_PGM_ID = Menu.FIRST;
     private static final int SAVE_PGM_ID = Menu.FIRST + 1;
-    private static final String HPDIR = "/HP Programs";
+    public static final String HPDIR = "/HP Programs";
+    public static final int ACTION_SELECTED=1;
 	
 	Handler mHandler = new Handler();
 	List<String> _btnNames;
@@ -56,7 +60,6 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         menu.add(0, SAVE_PGM_ID, 0, R.string.menu_save);
         return true;
     }
-
     
     @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
@@ -87,8 +90,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     		mExternalStorageWriteable = false;
     	} 
     	else 
-    	{   // Something else is wrong. It may be one of many other states, but all we need    
-    		//  to know is we can neither read nor write    
+    	{
     		mExternalStorageAvailable = mExternalStorageWriteable = false;
     	}
     
@@ -117,18 +119,19 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     
     private void loadProgram()
     {
-        File extFilesDir = Environment.getExternalStorageDirectory();
-    	File hpDir = new File(extFilesDir+HPDIR);
-        File[] files = hpDir.listFiles();
-        for (File file : files)
-        {
-        	
-        }
-        
-    	//file = res.openRawResource(R.raw.moon);
-    	
+        Intent i = new Intent(this, ProgramListActivity.class);
+        startActivityForResult(i, ACTIVITY_PGMLIST);
     }
     
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
+        if (requestCode==ACTIVITY_PGMLIST && resultCode == ACTION_SELECTED)
+        {
+        	Log.i("HP67",intent.getStringExtra("PGMFILE"));
+        }
+    }
+
     private void copyToFile(InputStream in, String filename)
     {
     	try
@@ -156,6 +159,8 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     
     public void btnPressed(View b)
     {
+    	// Do nothing method referenced in the main.xml for button clicks.
+    	// Left here in case I want to respond to full key press in the future.
     }
     
     public void btnClicked(View b)
