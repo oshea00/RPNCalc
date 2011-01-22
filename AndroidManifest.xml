@@ -14,6 +14,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ProgramListActivity" />
+        <activity android:name=".ProgramSaveActivity" />
 
     </application>
 <uses-permission android:name="android.permission.VIBRATE"/> 
