@@ -1,6 +1,7 @@
 package com.limpidfox;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -26,10 +27,12 @@ import android.content.res.*;
 public class Calculator extends Activity implements IDisplayUpdateHandler 
 {
     private static final int ACTIVITY_PGMLIST=0;
+    private static final int ACTIVITY_PGMSAVE=1;
     private static final int LOAD_PGM_ID = Menu.FIRST;
     private static final int SAVE_PGM_ID = Menu.FIRST + 1;
     public static final String HPDIR = "/HP Programs";
     public static final int ACTION_SELECTED=1;
+    public static final int ACTION_SAVE=2;
 	
 	Handler mHandler = new Handler();
 	List<String> _btnNames;
@@ -123,12 +126,28 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         startActivityForResult(i, ACTIVITY_PGMLIST);
     }
     
+    private void saveProgram()
+    {
+        Intent i = new Intent(this, ProgramSaveActivity.class);
+        startActivityForResult(i, ACTIVITY_PGMSAVE);
+    }
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
         if (requestCode==ACTIVITY_PGMLIST && resultCode == ACTION_SELECTED)
         {
-        	Log.i("HP67",intent.getStringExtra("PGMFILE"));
+            File extFilesDir = Environment.getExternalStorageDirectory();
+        	String pgmFile = intent.getStringExtra("PGMFILE");
+        	_hp.GetInnerHP97().SetProgram(HP97ProgramRepo.load(extFilesDir+HPDIR+"/"+pgmFile));
+        	setDisplay(_hp.GetDisplay());        
+        }
+        if (requestCode==ACTIVITY_PGMSAVE && resultCode == ACTION_SAVE)
+        {
+            File extFilesDir = Environment.getExternalStorageDirectory();
+        	String pgmFile = intent.getStringExtra("PGMFILE");
+        	HP97ProgramRepo.save(_hp.GetInnerHP97().GetProgram(),extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+        	setDisplay(_hp.GetDisplay());        
         }
     }
 
@@ -152,12 +171,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     	
     }
     
-    private void saveProgram()
-    {
-    	
-    }
-    
-    public void btnPressed(View b)
+	public void btnPressed(View b)
     {
     	// Do nothing method referenced in the main.xml for button clicks.
     	// Left here in case I want to respond to full key press in the future.

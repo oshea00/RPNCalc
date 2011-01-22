@@ -58,12 +58,15 @@ public final class R {
         public static final int btn83=0x7f070022;
         public static final int btn84=0x7f070023;
         public static final int btnPgm=0x7f070024;
+        public static final int btnSave=0x7f070027;
         public static final int card=0x7f070025;
         public static final int display=0x7f070000;
+        public static final int filename=0x7f070026;
     }
     public static final class layout {
         public static final int main=0x7f030000;
         public static final int pgmlist=0x7f030001;
+        public static final int pgnname=0x7f030002;
     }
     public static final class raw {
         public static final int moon=0x7f040000;

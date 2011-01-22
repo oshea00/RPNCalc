@@ -22,4 +22,14 @@ public class HP97Program
 	public String Labeld;
 	public String LabelE;
 	public String Labele;
+	
+	public HP97Program()
+	{
+		IsProgram = true;
+		DisplayMode = displayModes.Fixed;
+		AngleMode = angleModes.Degrees;
+		DisplaySize = 2;
+		Flags = new ArrayList<Boolean>(4);
+		Program = new ArrayList<PgmInstruction>();
+	}
 }
