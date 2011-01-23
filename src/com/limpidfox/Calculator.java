@@ -137,10 +137,14 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         super.onActivityResult(requestCode, resultCode, intent);
         if (requestCode==ACTIVITY_PGMLIST && resultCode == ACTION_SELECTED)
         {
+        	HP97 hp = _hp.GetInnerHP97();
             File extFilesDir = Environment.getExternalStorageDirectory();
         	String pgmFile = intent.getStringExtra("PGMFILE");
-        	_hp.GetInnerHP97().SetProgram(HP97ProgramRepo.load(extFilesDir+HPDIR+"/"+pgmFile));
+        	hp.SetProgram(HP97ProgramRepo.load(extFilesDir+HPDIR+"/"+pgmFile));
+        	hp._pgmStep = 0;
         	setDisplay(_hp.GetDisplay());        
+        	ImageView card = (ImageView) findViewById(R.id.card);
+        	card.setAlpha(255);
         }
         if (requestCode==ACTIVITY_PGMSAVE && resultCode == ACTION_SAVE)
         {

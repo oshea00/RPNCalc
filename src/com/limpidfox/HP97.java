@@ -127,7 +127,7 @@ public class HP97 extends RPNCalculator
 			MaxProgramSteps + 1);
 	// private PgmInstruction[] _program = new PgmInstruction[MaxProgramSteps +
 	// 1];
-	private int _pgmStep = 0;
+	public int _pgmStep = 0;
 
 	public displayModes GetDisplayMode() {
 		return _displayMode;
