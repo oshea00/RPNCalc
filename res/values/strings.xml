@@ -3,6 +3,7 @@
   <string name="app_name">HP67</string>
   <string name="menu_load">Load Program</string>
   <string name="menu_save">Save Program</string>
+  <string name="menu_delete">Delete Program</string>
   <string name="moon">Moon Lander.hp97</string>
   <string name="sd15">SD15 Diagnostic.hp97</string>
 </resources>

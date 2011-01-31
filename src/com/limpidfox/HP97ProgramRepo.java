@@ -103,7 +103,7 @@ public class HP97ProgramRepo
     	HP97Program pgm = new HP97Program();
 
     	try {
-        	BufferedReader in = new BufferedReader(new InputStreamReader(getInputStream(pgmFile)));
+        	BufferedReader in = new BufferedReader(new InputStreamReader(getInputStream(pgmFile))); 
 			String line = in.readLine();
 			while (!line.contains("</HP97Program>"))
 			{

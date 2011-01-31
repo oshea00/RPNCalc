@@ -33,11 +33,12 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     public static final String HPDIR = "/HP Programs";
     public static final int ACTION_SELECTED=1;
     public static final int ACTION_SAVE=2;
-	
+    
 	Handler mHandler = new Handler();
 	List<String> _btnNames;
 	HP67 _hp;
 	RelativeLayout _vMain;
+	String _pgmfile;
 	
     /** Called when the activity is first created. */
     @Override
@@ -129,6 +130,17 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     private void saveProgram()
     {
         Intent i = new Intent(this, ProgramSaveActivity.class);
+        i.putExtra("PGM", _pgmfile);
+        i.putExtra("A", ((TextView)findViewById(R.id.A)).getText());
+        i.putExtra("B", ((TextView)findViewById(R.id.B)).getText());
+        i.putExtra("C", ((TextView)findViewById(R.id.C)).getText());
+        i.putExtra("D", ((TextView)findViewById(R.id.D)).getText());
+        i.putExtra("E", ((TextView)findViewById(R.id.E)).getText());
+        i.putExtra("a", ((TextView)findViewById(R.id.a)).getText());
+        i.putExtra("b", ((TextView)findViewById(R.id.b)).getText());
+        i.putExtra("c", ((TextView)findViewById(R.id.c)).getText());
+        i.putExtra("d", ((TextView)findViewById(R.id.d)).getText());
+        i.putExtra("e", ((TextView)findViewById(R.id.e)).getText());
         startActivityForResult(i, ACTIVITY_PGMSAVE);
     }
     
@@ -140,18 +152,76 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         	HP97 hp = _hp.GetInnerHP97();
             File extFilesDir = Environment.getExternalStorageDirectory();
         	String pgmFile = intent.getStringExtra("PGMFILE");
-        	hp.SetProgram(HP97ProgramRepo.load(extFilesDir+HPDIR+"/"+pgmFile));
+        	_pgmfile = pgmFile;
+        	HP97Program pgm = HP97ProgramRepo.load(extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+        	TextView pgmName = (TextView) findViewById(R.id.pgmName);
+        	pgmName.setText(pgmFile);
+        	TextView A = (TextView) findViewById(R.id.A);
+        	A.setText(pgm.LabelA);
+        	TextView a = (TextView) findViewById(R.id.a);
+        	a.setText(pgm.Labela);
+        	TextView B = (TextView) findViewById(R.id.B);
+        	B.setText(pgm.LabelB);
+        	TextView b = (TextView) findViewById(R.id.b);
+        	b.setText(pgm.Labelb);
+        	TextView C = (TextView) findViewById(R.id.C);
+        	C.setText(pgm.LabelC);
+        	TextView c = (TextView) findViewById(R.id.c);
+        	c.setText(pgm.Labelc);
+        	TextView D = (TextView) findViewById(R.id.D);
+        	D.setText(pgm.LabelD);
+        	TextView d = (TextView) findViewById(R.id.d);
+        	d.setText(pgm.Labeld);
+        	TextView E = (TextView) findViewById(R.id.E);
+        	E.setText(pgm.LabelE);
+        	TextView e = (TextView) findViewById(R.id.e);
+        	e.setText(pgm.Labele);
+        	hp.SetProgram(pgm);
         	hp._pgmStep = 0;
         	setDisplay(_hp.GetDisplay());        
         	ImageView card = (ImageView) findViewById(R.id.card);
         	card.setAlpha(255);
+        	_vMain.invalidate();
         }
         if (requestCode==ACTIVITY_PGMSAVE && resultCode == ACTION_SAVE)
         {
             File extFilesDir = Environment.getExternalStorageDirectory();
         	String pgmFile = intent.getStringExtra("PGMFILE");
-        	HP97ProgramRepo.save(_hp.GetInnerHP97().GetProgram(),extFilesDir+HPDIR+"/"+pgmFile+".hp97");
-        	setDisplay(_hp.GetDisplay());        
+        	HP97Program pgm = _hp.GetInnerHP97().GetProgram();
+        	pgm.LabelA = intent.getStringExtra("A");
+        	pgm.LabelB = intent.getStringExtra("B");
+        	pgm.LabelC = intent.getStringExtra("C");
+        	pgm.LabelD = intent.getStringExtra("D");
+        	pgm.LabelE = intent.getStringExtra("E");
+        	pgm.Labela = intent.getStringExtra("a");
+        	pgm.Labelb = intent.getStringExtra("b");
+        	pgm.Labelc = intent.getStringExtra("c");
+        	pgm.Labeld = intent.getStringExtra("d");
+        	pgm.Labele = intent.getStringExtra("e");
+        	TextView pgmName = (TextView) findViewById(R.id.pgmName);
+        	pgmName.setText(pgmFile);
+        	TextView A = (TextView) findViewById(R.id.A);
+        	A.setText(pgm.LabelA);
+        	TextView a = (TextView) findViewById(R.id.a);
+        	a.setText(pgm.Labela);
+        	TextView B = (TextView) findViewById(R.id.B);
+        	B.setText(pgm.LabelB);
+        	TextView b = (TextView) findViewById(R.id.b);
+        	b.setText(pgm.Labelb);
+        	TextView C = (TextView) findViewById(R.id.C);
+        	C.setText(pgm.LabelC);
+        	TextView c = (TextView) findViewById(R.id.c);
+        	c.setText(pgm.Labelc);
+        	TextView D = (TextView) findViewById(R.id.D);
+        	D.setText(pgm.LabelD);
+        	TextView d = (TextView) findViewById(R.id.d);
+        	d.setText(pgm.Labeld);
+        	TextView E = (TextView) findViewById(R.id.E);
+        	E.setText(pgm.LabelE);
+        	TextView e = (TextView) findViewById(R.id.e);
+        	e.setText(pgm.Labele);
+        	HP97ProgramRepo.save(pgm,extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+        	setDisplay(_hp.GetDisplay());      
         }
     }
 

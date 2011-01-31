@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.limpidfox"
-      android:versionCode="1"
+      android:versionCode="2"
       android:versionName="1.0">
-    <application android:icon="@drawable/hpicon" android:label="@string/app_name"
-        android:theme="@style/hp67Background" android:debuggable="true">
+    <application android:icon="@drawable/hpicon" android:label="@string/app_name" android:debuggable="true"
+        android:theme="@style/hp67Background">
         <activity android:name=".Calculator"
                   android:label="@string/app_name"
                   android:screenOrientation="portrait">

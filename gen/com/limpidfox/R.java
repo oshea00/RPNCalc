@@ -22,6 +22,20 @@ public final class R {
         public static final int slideright=0x7f020008;
     }
     public static final class id {
+        public static final int A=0x7f070027;
+        public static final int Alabel=0x7f070032;
+        public static final int B=0x7f070029;
+        public static final int Blabel=0x7f070034;
+        public static final int C=0x7f07002b;
+        public static final int Clabel=0x7f070036;
+        public static final int D=0x7f07002d;
+        public static final int Dlabel=0x7f070038;
+        public static final int E=0x7f07002f;
+        public static final int Elabel=0x7f07003a;
+        public static final int a=0x7f070028;
+        public static final int alabel=0x7f070033;
+        public static final int b=0x7f07002a;
+        public static final int blabel=0x7f070035;
         public static final int btn11=0x7f070001;
         public static final int btn12=0x7f070002;
         public static final int btn13=0x7f070003;
@@ -58,10 +72,17 @@ public final class R {
         public static final int btn83=0x7f070022;
         public static final int btn84=0x7f070023;
         public static final int btnPgm=0x7f070024;
-        public static final int btnSave=0x7f070027;
+        public static final int btnSave=0x7f07003c;
+        public static final int c=0x7f07002c;
         public static final int card=0x7f070025;
+        public static final int clabel=0x7f070037;
+        public static final int d=0x7f07002e;
         public static final int display=0x7f070000;
-        public static final int filename=0x7f070026;
+        public static final int dlabel=0x7f070039;
+        public static final int e=0x7f070030;
+        public static final int elabel=0x7f07003b;
+        public static final int filename=0x7f070031;
+        public static final int pgmName=0x7f070026;
     }
     public static final class layout {
         public static final int main=0x7f030000;
@@ -74,18 +95,21 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
+        public static final int menu_delete=0x7f050003;
         public static final int menu_load=0x7f050001;
         public static final int menu_save=0x7f050002;
-        public static final int moon=0x7f050003;
-        public static final int sd15=0x7f050004;
+        public static final int moon=0x7f050004;
+        public static final int sd15=0x7f050005;
     }
     public static final class style {
-        public static final int calcBtnDig=0x7f060006;
-        public static final int calcBtnLg=0x7f060005;
-        public static final int calcBtnMed=0x7f060004;
+        public static final int calcBtnDig=0x7f060008;
+        public static final int calcBtnLg=0x7f060007;
+        public static final int calcBtnMed=0x7f060006;
         public static final int calcButton=0x7f060001;
         public static final int calcDisplay=0x7f060003;
+        public static final int calcLabel=0x7f060005;
         public static final int hp67Background=0x7f060000;
+        public static final int pgmName=0x7f060004;
         public static final int slideButton=0x7f060002;
     }
 }

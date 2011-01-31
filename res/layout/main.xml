@@ -357,5 +357,93 @@
     android:layout_marginTop="87dp"
     android:src="@drawable/card"
  />
+ <TextView
+    android:id="@+id/pgmName"
+    style="@style/pgmName"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="90dp"
+/>
+ <TextView
+    android:id="@+id/A"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="117dp"
+/>
+ <TextView
+    android:id="@+id/a"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="50dp"
+    android:layout_marginTop="107dp"
+/>
+ <TextView
+    android:id="@+id/B"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="95dp"
+    android:layout_marginTop="117dp"
+/>
+ <TextView
+    android:id="@+id/b"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="95dp"
+    android:layout_marginTop="107dp"
+/>
+ <TextView
+    android:id="@+id/C"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="140dp"
+    android:layout_marginTop="117dp"
+/>
+ <TextView
+    android:id="@+id/c"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="140dp"
+    android:layout_marginTop="107dp"
+/>
+ <TextView
+    android:id="@+id/D"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="185dp"
+    android:layout_marginTop="117dp"
+/>
+ <TextView
+    android:id="@+id/d"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="185dp"
+    android:layout_marginTop="107dp"
+/>
+ <TextView
+    android:id="@+id/E"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="230dp"
+    android:layout_marginTop="117dp"
+/>
+ <TextView
+    android:id="@+id/e"
+    style="@style/calcLabel"  
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_marginLeft="230dp"
+    android:layout_marginTop="107dp"
+/>
   
 </RelativeLayout>

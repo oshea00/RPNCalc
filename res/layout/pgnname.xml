@@ -4,16 +4,137 @@
   android:orientation="vertical"
   android:layout_width="fill_parent"
   android:layout_height="fill_parent">
+<TextView
+    android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:text="Program Name"
+/>
 <EditText 
     android:id="@+id/filename" 
     android:layout_width="match_parent"
 	android:layout_height="wrap_content"
 	android:text=""
 />
+ <TableLayout
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:stretchColumns="1,3"
+  >
+<TableRow>
+<TextView
+    android:layout_column="0"
+    android:layout_height="wrap_content"
+    android:text="A"/>
+<EditText 
+    android:layout_column="1"
+    android:id="@+id/Alabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+<TextView
+    android:layout_column="2"
+    android:layout_height="wrap_content"
+    android:text="a"/>
+<EditText 
+    android:layout_column="3"
+    android:id="@+id/alabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+</TableRow>
+<TableRow>
+<TextView
+    android:layout_column="0"
+    android:layout_height="wrap_content"
+    android:text="B"/>
+<EditText 
+    android:layout_column="1"
+    android:id="@+id/Blabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+<TextView
+    android:layout_column="2"
+    android:layout_height="wrap_content"
+    android:text="b"/>
+<EditText 
+    android:layout_column="3"
+    android:id="@+id/blabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+</TableRow>
+<TableRow>
+<TextView
+    android:layout_column="0"
+    android:layout_height="wrap_content"
+    android:text="C"/>
+<EditText 
+    android:layout_column="1"
+    android:id="@+id/Clabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+<TextView
+    android:layout_column="2"
+    android:layout_height="wrap_content"
+    android:text="c"/>
+<EditText 
+    android:layout_column="3"
+    android:id="@+id/clabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+</TableRow>
+<TableRow>
+<TextView
+    android:layout_column="0"
+    android:layout_height="wrap_content"
+    android:text="D"/>
+<EditText 
+    android:layout_column="1"
+    android:id="@+id/Dlabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+<TextView
+    android:layout_column="2"
+    android:layout_height="wrap_content"
+    android:text="d"/>
+<EditText 
+    android:layout_column="3"
+    android:id="@+id/dlabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+</TableRow>
+<TableRow>
+<TextView
+    android:layout_column="0"
+    android:layout_height="wrap_content"
+    android:text="E"/>
+<EditText 
+    android:layout_column="1"
+    android:id="@+id/Elabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+<TextView
+    android:layout_column="2"
+    android:layout_height="wrap_content"
+    android:text="e"/>
+<EditText 
+    android:layout_column="3"
+    android:id="@+id/elabel"
+	android:layout_height="wrap_content"
+	android:text=""
+/>
+</TableRow>
+</TableLayout>
  <Button
     android:id="@+id/btnSave"
     android:onClick="btnPressed"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:text="Save"
  />
