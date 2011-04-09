@@ -34,7 +34,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
     public static final int ACTION_SELECTED=1;
     public static final int ACTION_SAVE=2;
     
-	Handler mHandler = new Handler();
+	 Handler mHandler = new Handler();
 	List<String> _btnNames;
 	HP67 _hp;
 	RelativeLayout _vMain;
@@ -306,7 +306,6 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         display.setText(txt);    	
     }
 
-	@Override
 	public void DisplayUpdateHandler(Object sender, final DisplayEventArgs e) {
 		mHandler.post(new Runnable(){
 			public void run()
@@ -326,7 +325,6 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         	{
         		((Button)_vMain.getChildAt(i)).setOnTouchListener(
         				new OnTouchListener(){
-        					@Override
         					public boolean onTouch(View v, MotionEvent event)
         					{
         						if (event.getAction()==MotionEvent.ACTION_DOWN)

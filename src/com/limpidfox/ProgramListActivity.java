@@ -43,7 +43,6 @@ public class ProgramListActivity extends ListActivity
 	    lv.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 		lv.setTextFilterEnabled(true);  
 		lv.setOnItemClickListener(new OnItemClickListener() {  
-		    @Override
 		    public void onItemClick(AdapterView<?> parent, View view, int position, long id) 
 		    {
 		        returnResult(((TextView) view).getText().toString());
