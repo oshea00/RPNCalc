@@ -4218,19 +4218,30 @@ public class HP97 extends RPNCalculator
 	public void GoSub(String label)
 	{
 		GoSubLabel(label);
+		
+		if (_gotoFKeyLabel==true)
+			return;
+		
 		// If Gosub resolves a target label, then
 		// the stack will have at least 1 return entry
 		if (NextStep.size() > 0)
 		{
-			SetRunning(true);
-			Thread thr = new Thread()
+			if (GetRunning()==true)
 			{
-				public void run()
+				RunSubRoutine();
+			}
+			else
+			{
+				SetRunning(true);
+				Thread thr = new Thread()
 				{
-					RunSubRoutine();
-				}
-			};
-			thr.start();
+					public void run()
+					{
+						RunSubRoutine();
+					}
+				};
+				thr.start();
+			}
 		}
 	}
 	
@@ -4252,6 +4263,7 @@ public class HP97 extends RPNCalculator
 			else
 			{
 				ProcessGSBLabel(name);
+				_gotoFKeyLabel = false;
 			}
 		}
 	}
