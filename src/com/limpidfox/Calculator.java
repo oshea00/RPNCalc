@@ -156,16 +156,6 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
     {
         Intent i = new Intent(this, DataSaveActivity.class);
         i.putExtra("PGM", _datafile);
-        i.putExtra("A", ((TextView)findViewById(R.id.A)).getText());
-        i.putExtra("B", ((TextView)findViewById(R.id.B)).getText());
-        i.putExtra("C", ((TextView)findViewById(R.id.C)).getText());
-        i.putExtra("D", ((TextView)findViewById(R.id.D)).getText());
-        i.putExtra("E", ((TextView)findViewById(R.id.E)).getText());
-        i.putExtra("a", ((TextView)findViewById(R.id.a)).getText());
-        i.putExtra("b", ((TextView)findViewById(R.id.b)).getText());
-        i.putExtra("c", ((TextView)findViewById(R.id.c)).getText());
-        i.putExtra("d", ((TextView)findViewById(R.id.d)).getText());
-        i.putExtra("e", ((TextView)findViewById(R.id.e)).getText());
         startActivityForResult(i, ACTIVITY_DATASAVE);
     }
     
@@ -255,6 +245,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         	TextView e = (TextView) findViewById(R.id.e);
         	e.setText(pgm.Labele);
        	    HP97ProgramRepo.save(pgm,extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+       	    _pgmfile = pgmFile;
         	setDisplay(_hp.GetDisplay());      
         }
         if (requestCode==ACTIVITY_DATASAVE && resultCode == ACTION_SAVE)
@@ -263,6 +254,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         	String pgmFile = intent.getStringExtra("PGMFILE");
         	HP97Program data = _hp.GetInnerHP97().GetData();
        		HP97DataRepo.save(data,extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+       	    _datafile = pgmFile;
         	setDisplay(_hp.GetDisplay());      
         }
     }
