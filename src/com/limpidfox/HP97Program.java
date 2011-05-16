@@ -31,5 +31,6 @@ public class HP97Program
 		DisplaySize = 2;
 		Flags = new ArrayList<Boolean>(4);
 		Program = new ArrayList<PgmInstruction>();
+		Registers = new ArrayList<Double>();
 	}
 }

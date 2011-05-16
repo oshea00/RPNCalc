@@ -5,9 +5,14 @@ import java.util.*;
 public class HP97 extends RPNCalculator
 {
 	private IDisplayUpdateHandler _displayHandler;
+	private IWriteDataHandler _writeDataHandler;
 
 	public void setDisplayHandler(IDisplayUpdateHandler handler) {
 		_displayHandler = handler;
+	}
+
+	public void setWriteDataHandler(IWriteDataHandler handler) {
+		_writeDataHandler = handler;
 	}
 
 	private boolean _running;
@@ -887,8 +892,7 @@ public class HP97 extends RPNCalculator
 //ORIGINAL LINE: case "ZERO":
 		else if (name.equals("ZERO")) //write data
 		{
-			// TODO implement writedata
-				//WriteData();
+			WriteData();
 		}
 //ORIGINAL LINE: case "ONE":
 		else if (name.equals("ONE"))
@@ -1116,6 +1120,14 @@ public class HP97 extends RPNCalculator
 		}
 		return false;
 	}	
+
+	private void WriteData() 
+	{
+		if (_writeDataHandler != null)
+		{
+			_writeDataHandler.WriteDataHandler(this, new DisplayEventArgs(""));
+		}
+	}
 
 	private void deleteInstruction()
 	{

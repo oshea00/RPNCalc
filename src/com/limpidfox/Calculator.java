@@ -24,12 +24,14 @@ import java.io.*;
 
 import android.content.res.*;
 
-public class Calculator extends Activity implements IDisplayUpdateHandler 
+public class Calculator extends Activity implements IDisplayUpdateHandler, IWriteDataHandler 
 {
     private static final int ACTIVITY_PGMLIST=0;
     private static final int ACTIVITY_PGMSAVE=1;
+    private static final int ACTIVITY_DATASAVE=2;
     private static final int LOAD_PGM_ID = Menu.FIRST;
     private static final int SAVE_PGM_ID = Menu.FIRST + 1;
+    private static final int SAVE_DATA_ID = Menu.FIRST + 2;
     public static final String HPDIR = "/HP Programs";
     public static final int ACTION_SELECTED=1;
     public static final int ACTION_SAVE=2;
@@ -39,6 +41,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
 	HP67 _hp;
 	RelativeLayout _vMain;
 	String _pgmfile;
+	String _datafile;
 	
     /** Called when the activity is first created. */
     @Override
@@ -47,6 +50,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         initButtonNames();
         _hp = new HP67();
         _hp.setDisplayHandler(this);
+        _hp.setWriteDataHandler(this);
         _vMain = (RelativeLayout) this.getLayoutInflater().inflate(R.layout.main, null);
         setContentView(_vMain);
     	ImageView card = (ImageView) findViewById(R.id.card);
@@ -62,6 +66,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         super.onCreateOptionsMenu(menu);
         menu.add(0, LOAD_PGM_ID, 0, R.string.menu_load);
         menu.add(0, SAVE_PGM_ID, 0, R.string.menu_save);
+        menu.add(0, SAVE_DATA_ID, 0, R.string.menu_savedata);
         return true;
     }
     
@@ -73,6 +78,9 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
                 return true;
             case SAVE_PGM_ID:
                 saveProgram();
+                return true;
+            case SAVE_DATA_ID:
+                saveData();
                 return true;
         }
 
@@ -144,6 +152,23 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         startActivityForResult(i, ACTIVITY_PGMSAVE);
     }
     
+    private void saveData()
+    {
+        Intent i = new Intent(this, DataSaveActivity.class);
+        i.putExtra("PGM", _datafile);
+        i.putExtra("A", ((TextView)findViewById(R.id.A)).getText());
+        i.putExtra("B", ((TextView)findViewById(R.id.B)).getText());
+        i.putExtra("C", ((TextView)findViewById(R.id.C)).getText());
+        i.putExtra("D", ((TextView)findViewById(R.id.D)).getText());
+        i.putExtra("E", ((TextView)findViewById(R.id.E)).getText());
+        i.putExtra("a", ((TextView)findViewById(R.id.a)).getText());
+        i.putExtra("b", ((TextView)findViewById(R.id.b)).getText());
+        i.putExtra("c", ((TextView)findViewById(R.id.c)).getText());
+        i.putExtra("d", ((TextView)findViewById(R.id.d)).getText());
+        i.putExtra("e", ((TextView)findViewById(R.id.e)).getText());
+        startActivityForResult(i, ACTIVITY_DATASAVE);
+    }
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
@@ -154,34 +179,43 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         	String pgmFile = intent.getStringExtra("PGMFILE");
         	_pgmfile = pgmFile;
         	HP97Program pgm = HP97ProgramRepo.load(extFilesDir+HPDIR+"/"+pgmFile+".hp97");
-        	TextView pgmName = (TextView) findViewById(R.id.pgmName);
-        	pgmName.setText(pgmFile);
-        	TextView A = (TextView) findViewById(R.id.A);
-        	A.setText(pgm.LabelA);
-        	TextView a = (TextView) findViewById(R.id.a);
-        	a.setText(pgm.Labela);
-        	TextView B = (TextView) findViewById(R.id.B);
-        	B.setText(pgm.LabelB);
-        	TextView b = (TextView) findViewById(R.id.b);
-        	b.setText(pgm.Labelb);
-        	TextView C = (TextView) findViewById(R.id.C);
-        	C.setText(pgm.LabelC);
-        	TextView c = (TextView) findViewById(R.id.c);
-        	c.setText(pgm.Labelc);
-        	TextView D = (TextView) findViewById(R.id.D);
-        	D.setText(pgm.LabelD);
-        	TextView d = (TextView) findViewById(R.id.d);
-        	d.setText(pgm.Labeld);
-        	TextView E = (TextView) findViewById(R.id.E);
-        	E.setText(pgm.LabelE);
-        	TextView e = (TextView) findViewById(R.id.e);
-        	e.setText(pgm.Labele);
-        	hp.SetProgram(pgm);
-        	hp._pgmStep = 0;
-        	setDisplay(_hp.GetDisplay());        
-        	ImageView card = (ImageView) findViewById(R.id.card);
-        	card.setAlpha(255);
-        	_vMain.invalidate();
+        	if (pgm.IsProgram)
+        	{
+	        	TextView pgmName = (TextView) findViewById(R.id.pgmName);
+	        	pgmName.setText(pgmFile);
+	        	TextView A = (TextView) findViewById(R.id.A);
+	        	A.setText(pgm.LabelA);
+	        	TextView a = (TextView) findViewById(R.id.a);
+	        	a.setText(pgm.Labela);
+	        	TextView B = (TextView) findViewById(R.id.B);
+	        	B.setText(pgm.LabelB);
+	        	TextView b = (TextView) findViewById(R.id.b);
+	        	b.setText(pgm.Labelb);
+	        	TextView C = (TextView) findViewById(R.id.C);
+	        	C.setText(pgm.LabelC);
+	        	TextView c = (TextView) findViewById(R.id.c);
+	        	c.setText(pgm.Labelc);
+	        	TextView D = (TextView) findViewById(R.id.D);
+	        	D.setText(pgm.LabelD);
+	        	TextView d = (TextView) findViewById(R.id.d);
+	        	d.setText(pgm.Labeld);
+	        	TextView E = (TextView) findViewById(R.id.E);
+	        	E.setText(pgm.LabelE);
+	        	TextView e = (TextView) findViewById(R.id.e);
+	        	e.setText(pgm.Labele);
+	        	hp.SetProgram(pgm);
+	        	hp._pgmStep = 0;
+	        	setDisplay(_hp.GetDisplay());        
+	        	ImageView card = (ImageView) findViewById(R.id.card);
+	        	card.setAlpha(255);
+	        	_vMain.invalidate();
+        	}
+        	else
+        	{
+        		_datafile = new String(_pgmfile);
+        		HP97Program data = HP97DataRepo.load(extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+        		hp.SetData(data);
+        	}
         }
         if (requestCode==ACTIVITY_PGMSAVE && resultCode == ACTION_SAVE)
         {
@@ -220,7 +254,15 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
         	E.setText(pgm.LabelE);
         	TextView e = (TextView) findViewById(R.id.e);
         	e.setText(pgm.Labele);
-        	HP97ProgramRepo.save(pgm,extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+       	    HP97ProgramRepo.save(pgm,extFilesDir+HPDIR+"/"+pgmFile+".hp97");
+        	setDisplay(_hp.GetDisplay());      
+        }
+        if (requestCode==ACTIVITY_DATASAVE && resultCode == ACTION_SAVE)
+        {
+            File extFilesDir = Environment.getExternalStorageDirectory();
+        	String pgmFile = intent.getStringExtra("PGMFILE");
+        	HP97Program data = _hp.GetInnerHP97().GetData();
+       		HP97DataRepo.save(data,extFilesDir+HPDIR+"/"+pgmFile+".hp97");
         	setDisplay(_hp.GetDisplay());      
         }
     }
@@ -311,6 +353,17 @@ public class Calculator extends Activity implements IDisplayUpdateHandler
 			public void run()
 			{
 				setDisplay(_hp.GetDisplay());
+			}
+		});
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void WriteDataHandler(Object sender, final DisplayEventArgs e) {
+		mHandler.post(new Runnable(){
+			public void run()
+			{
+                saveData();
 			}
 		});
 		// TODO Auto-generated method stub

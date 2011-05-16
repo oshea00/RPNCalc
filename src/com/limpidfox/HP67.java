@@ -18,6 +18,11 @@ public class HP67
 		_hp97.setDisplayHandler(handler);
 	}
 	
+	public void setWriteDataHandler(IWriteDataHandler handler)
+	{
+		_hp97.setWriteDataHandler(handler);
+	}
+	
 	public void SetStopPrint(boolean value)
 	{
 		_stopPrint = value;
