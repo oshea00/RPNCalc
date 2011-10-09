@@ -16,7 +16,6 @@
         <activity android:name=".ProgramListActivity" />
         <activity android:name=".ProgramSaveActivity" />
         <activity android:name=".DataSaveActivity" />
-
     </application>
 <uses-permission android:name="android.permission.VIBRATE"/> 
 

@@ -2454,29 +2454,22 @@ public class HP97 extends RPNCalculator
 	public void FGSBKey(String keyCode)
 	{
 		// Commands Starting with "GSB" "F"
-//C# TO JAVA CONVERTER NOTE: The following 'switch' operated on a string member and was converted to Java 'if-else' logic:
-//		switch (keyCode)
-//ORIGINAL LINE: case "11":
 		if (keyCode.equals("11"))
 		{
 				InsertInstruction("GSBa", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "12":
 		else if (keyCode.equals("12"))
 		{
 				InsertInstruction("GSBb", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "13":
 		else if (keyCode.equals("13"))
 		{
 				InsertInstruction("GSBc", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "14":
 		else if (keyCode.equals("14"))
 		{
 				InsertInstruction("GSBd", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "15":
 		else if (keyCode.equals("15"))
 		{
 				InsertInstruction("GSBe", keyCode, key[1], key[0]);
@@ -2486,29 +2479,22 @@ public class HP97 extends RPNCalculator
 	public void FGTOKeys(String keyCode)
 	{
 		// Commands Starting with "GTO"
-//C# TO JAVA CONVERTER NOTE: The following 'switch' operated on a string member and was converted to Java 'if-else' logic:
-//		switch (keyCode)
-//ORIGINAL LINE: case "11":
 		if (keyCode.equals("11"))
 		{
 				InsertInstruction("GTOa", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "12":
 		else if (keyCode.equals("12"))
 		{
 				InsertInstruction("GTOb", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "13":
 		else if (keyCode.equals("13"))
 		{
 				InsertInstruction("GTOc", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "14":
 		else if (keyCode.equals("14"))
 		{
 				InsertInstruction("GTOd", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "15":
 		else if (keyCode.equals("15"))
 		{
 				InsertInstruction("GTOe", keyCode, key[1], key[0]);
@@ -2519,29 +2505,22 @@ public class HP97 extends RPNCalculator
 	public void FLBLKeys(String keyCode)
 	{
 		// Commands Starting with "LBL"
-//C# TO JAVA CONVERTER NOTE: The following 'switch' operated on a string member and was converted to Java 'if-else' logic:
-//		switch (keyCode)
-//ORIGINAL LINE: case "11":
 		if (keyCode.equals("11"))
 		{
 				InsertInstruction("*LBLa", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "12":
 		else if (keyCode.equals("12"))
 		{
 				InsertInstruction("*LBLb", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "13":
 		else if (keyCode.equals("13"))
 		{
 				InsertInstruction("*LBLc", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "14":
 		else if (keyCode.equals("14"))
 		{
 				InsertInstruction("*LBLd", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "15":
 		else if (keyCode.equals("15"))
 		{
 				InsertInstruction("*LBLe", keyCode, key[1], key[0]);
@@ -2552,59 +2531,46 @@ public class HP97 extends RPNCalculator
 	public void STOFuncKeys(String keyCode)
 	{
 		// Commands Starting with "STO" /, +, -, or *
-//C# TO JAVA CONVERTER NOTE: The following 'switch' operated on a string member and was converted to Java 'if-else' logic:
-//		switch (keyCode)
-//ORIGINAL LINE: case "00":
 		if (keyCode.equals("00"))
 		{
 				InsertInstruction("ST\u00f70", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "01":
 		else if (keyCode.equals("01"))
 		{
 				InsertInstruction("ST\u00f71", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "02":
 		else if (keyCode.equals("02"))
 		{
 				InsertInstruction("ST\u00f72", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "03":
 		else if (keyCode.equals("03"))
 		{
 				InsertInstruction("ST\u00f73", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "04":
 		else if (keyCode.equals("04"))
 		{
 				InsertInstruction("ST\u00f74", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "05":
 		else if (keyCode.equals("05"))
 		{
 				InsertInstruction("ST\u00f75", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "06":
 		else if (keyCode.equals("06"))
 		{
 				InsertInstruction("ST\u00f76", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "07":
 		else if (keyCode.equals("07"))
 		{
 				InsertInstruction("ST\u00f77", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "08":
 		else if (keyCode.equals("08"))
 		{
 				InsertInstruction("ST\u00f78", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "09":
 		else if (keyCode.equals("09"))
 		{
 				InsertInstruction("ST\u00f79", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "45":
 		else if (keyCode.equals("45"))
 		{
 				InsertInstruction("ST\u00f7\u00a1", keyCode, key[1], key[0]);
@@ -2615,59 +2581,46 @@ public class HP97 extends RPNCalculator
 	public void STOFuncMinusKeys(String keyCode)
 	{
 		// Commands Starting with "STO" /, +, -, or *
-//C# TO JAVA CONVERTER NOTE: The following 'switch' operated on a string member and was converted to Java 'if-else' logic:
-//		switch (keyCode)
-//ORIGINAL LINE: case "00":
 		if (keyCode.equals("00"))
 		{
 				InsertInstruction("ST-0", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "01":
 		else if (keyCode.equals("01"))
 		{
 				InsertInstruction("ST-1", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "02":
 		else if (keyCode.equals("02"))
 		{
 				InsertInstruction("ST-2", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "03":
 		else if (keyCode.equals("03"))
 		{
 				InsertInstruction("ST-3", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "04":
 		else if (keyCode.equals("04"))
 		{
 				InsertInstruction("ST-4", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "05":
 		else if (keyCode.equals("05"))
 		{
 				InsertInstruction("ST-5", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "06":
 		else if (keyCode.equals("06"))
 		{
 				InsertInstruction("ST-6", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "07":
 		else if (keyCode.equals("07"))
 		{
 				InsertInstruction("ST-7", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "08":
 		else if (keyCode.equals("08"))
 		{
 				InsertInstruction("ST-8", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "09":
 		else if (keyCode.equals("09"))
 		{
 				InsertInstruction("ST-9", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "45":
 		else if (keyCode.equals("45"))
 		{
 				InsertInstruction("ST-\u00a1", keyCode, key[1], key[0]);
@@ -2678,59 +2631,46 @@ public class HP97 extends RPNCalculator
 	public void STOFuncPlusKeys(String keyCode)
 	{
 		// Commands Starting with "STO" /, +, -, or *
-//C# TO JAVA CONVERTER NOTE: The following 'switch' operated on a string member and was converted to Java 'if-else' logic:
-//		switch (keyCode)
-//ORIGINAL LINE: case "00":
 		if (keyCode.equals("00"))
 		{
 				InsertInstruction("ST+0", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "01":
 		else if (keyCode.equals("01"))
 		{
 				InsertInstruction("ST+1", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "02":
 		else if (keyCode.equals("02"))
 		{
 				InsertInstruction("ST+2", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "03":
 		else if (keyCode.equals("03"))
 		{
 				InsertInstruction("ST+3", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "04":
 		else if (keyCode.equals("04"))
 		{
 				InsertInstruction("ST+4", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "05":
 		else if (keyCode.equals("05"))
 		{
 				InsertInstruction("ST+5", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "06":
 		else if (keyCode.equals("06"))
 		{
 				InsertInstruction("ST+6", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "07":
 		else if (keyCode.equals("07"))
 		{
 				InsertInstruction("ST+7", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "08":
 		else if (keyCode.equals("08"))
 		{
 				InsertInstruction("ST+8", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "09":
 		else if (keyCode.equals("09"))
 		{
 				InsertInstruction("ST+9", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "45":
 		else if (keyCode.equals("45"))
 		{
 				InsertInstruction("ST+\u00a1", keyCode, key[1], key[0]);
@@ -2741,59 +2681,46 @@ public class HP97 extends RPNCalculator
 	public void STOFuncMultKeys(String keyCode)
 	{
 		// Commands Starting with "STO" /, +, -, or *
-//C# TO JAVA CONVERTER NOTE: The following 'switch' operated on a string member and was converted to Java 'if-else' logic:
-//		switch (keyCode)
-//ORIGINAL LINE: case "00":
 		if (keyCode.equals("00"))
 		{
 				InsertInstruction("STx0", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "01":
 		else if (keyCode.equals("01"))
 		{
 				InsertInstruction("STx1", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "02":
 		else if (keyCode.equals("02"))
 		{
 				InsertInstruction("STx2", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "03":
 		else if (keyCode.equals("03"))
 		{
 				InsertInstruction("STx3", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "04":
 		else if (keyCode.equals("04"))
 		{
 				InsertInstruction("STx4", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "05":
 		else if (keyCode.equals("05"))
 		{
 				InsertInstruction("STx5", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "06":
 		else if (keyCode.equals("06"))
 		{
 				InsertInstruction("STx6", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "07":
 		else if (keyCode.equals("07"))
 		{
 				InsertInstruction("STx7", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "08":
 		else if (keyCode.equals("08"))
 		{
 				InsertInstruction("STx8", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "09":
 		else if (keyCode.equals("09"))
 		{
 				InsertInstruction("STx9", keyCode, key[1], key[0]);
 		}
-//ORIGINAL LINE: case "45":
 		else if (keyCode.equals("45"))
 		{
 				InsertInstruction("STx\u00a1", keyCode, key[1], key[0]);
