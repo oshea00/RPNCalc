@@ -3,3 +3,10 @@
 *.ap_
 classes.dex
 \.settings/
+.metadata
+bin
+project.properties
+.DS_Store
+
+
+
