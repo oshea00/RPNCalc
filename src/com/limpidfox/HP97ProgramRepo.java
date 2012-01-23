@@ -78,6 +78,7 @@ public class HP97ProgramRepo
 			out.println("</HP97Program>");
 			out.close();
 		} catch (FileNotFoundException e) {
+			String msg = e.getMessage();
 		}
     }
     

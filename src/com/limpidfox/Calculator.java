@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -52,6 +54,7 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         _hp.setDisplayHandler(this);
         _hp.setWriteDataHandler(this);
         _vMain = (RelativeLayout) this.getLayoutInflater().inflate(R.layout.main, null);
+        logDisplayMetrics();
         setContentView(_vMain);
     	ImageView card = (ImageView) findViewById(R.id.card);
     	card.setAlpha(0);
@@ -59,6 +62,30 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         display.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/HP97R.ttf"));
         setButtonListeners();
         unpackPrograms();
+    }
+    
+    public void logDisplayMetrics()
+    {
+        int sizeMask = this.getResources().getConfiguration().screenLayout;
+        Display disp = getWindowManager().getDefaultDisplay();
+        DisplayMetrics dm = new DisplayMetrics();
+        disp.getMetrics(dm);
+
+        int width = disp.getWidth();
+        int height = disp.getHeight();
+        int density = dm.densityDpi;
+        String densityString = null;
+
+        if(density == DisplayMetrics.DENSITY_HIGH) {
+            densityString = "HDPI";
+        } else if(density == DisplayMetrics.DENSITY_XHIGH) {
+            densityString = "XHDPI";
+        } else if(density == DisplayMetrics.DENSITY_MEDIUM) {
+            densityString = "MDPI";
+        } else if(density == DisplayMetrics.DENSITY_LOW) {
+            densityString = "LDPI";
+        }
+        Log.d("Calculator",String.format("density=%s layout mask %02X Width=%d Height=%d",densityString,sizeMask,width,height));
     }
 
     @Override
