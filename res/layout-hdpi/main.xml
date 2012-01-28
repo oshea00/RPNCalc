@@ -344,7 +344,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="215dp"
-    android:layout_marginTop="79dp"
+    android:layout_marginTop="76dp"
     android:onClick="btnPressed"
  />
  <ImageView

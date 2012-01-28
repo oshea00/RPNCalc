@@ -18,7 +18,7 @@
       <item name="android:button">@drawable/slide_button</item>
     </style>
     <style name="calcDisplay">
-      <item name="android:layout_width">240dp</item>
+      <item name="android:layout_width">220dp</item>
       <item name="android:layout_height">30dp</item>
       <item name="android:background">#300000</item>
       <item name="android:textColor">#ff0000</item>
@@ -45,7 +45,7 @@
       <item name="android:background">@drawable/calc_button</item>
     </style>
     <style name="calcBtnLg">
-      <item name="android:layout_width">94dp</item>
+      <item name="android:layout_width">80dp</item>
       <item name="android:layout_height">26dp</item>
       <item name="android:background">@drawable/calc_button</item>
     </style>

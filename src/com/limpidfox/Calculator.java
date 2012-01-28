@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -37,6 +38,9 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
     public static final String HPDIR = "/HP Programs";
     public static final int ACTION_SELECTED=1;
     public static final int ACTION_SAVE=2;
+    float dpi = 0;
+    int display_width = 0;
+    int display_height = 0;
     
 	 Handler mHandler = new Handler();
 	List<String> _btnNames;
@@ -54,8 +58,11 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         _hp.setDisplayHandler(this);
         _hp.setWriteDataHandler(this);
         _vMain = (RelativeLayout) this.getLayoutInflater().inflate(R.layout.main, null);
+        // See if we can adjust layout here
         logDisplayMetrics();
+        adjustMainLayout(_vMain);
         setContentView(_vMain);
+        
     	ImageView card = (ImageView) findViewById(R.id.card);
     	card.setAlpha(0);
         TextView display = (TextView) findViewById(R.id.display);
@@ -71,8 +78,9 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         DisplayMetrics dm = new DisplayMetrics();
         disp.getMetrics(dm);
 
-        int width = disp.getWidth();
-        int height = disp.getHeight();
+        dpi = dm.density;
+        display_width = disp.getWidth();
+        display_height = disp.getHeight();
         int density = dm.densityDpi;
         String densityString = null;
 
@@ -85,9 +93,34 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         } else if(density == DisplayMetrics.DENSITY_LOW) {
             densityString = "LDPI";
         }
-        Log.d("Calculator",String.format("density=%s layout mask %02X Width=%d Height=%d",densityString,sizeMask,width,height));
+        Log.d("Calculator",String.format("density=%s dpi=%f layout mask %02X Width=%d Height=%d",densityString,dpi,sizeMask,display_width,display_height));
     }
-
+    
+    public void adjustMainLayout(RelativeLayout m)
+    {
+    	int cCnt = m.getChildCount();
+    	for (int i=0;i<cCnt;i++)
+    	{
+    		View c =m.getChildAt(i);
+    			// Button b = (Button) c;
+    		if (c instanceof Button || 
+    			c instanceof TextView ||
+    			c.getId()==R.id.card ||
+    			c.getId()==R.id.btnPgm)
+    		{
+    			float dh = display_height;
+    			float dw = display_width;
+    			float sw = (dw/dpi)/320;
+    			float sh = (dh/dpi)/533;
+    			RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) c.getLayoutParams();
+    			p.leftMargin = (int) (p.leftMargin*sw);
+    			p.width = (int) (p.width*sw);
+    			p.topMargin = (int) (p.topMargin*sh);
+    			p.height = (int) (p.height*sh);
+    		}
+    	}
+    }
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
