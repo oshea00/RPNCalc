@@ -1,15 +1,12 @@
 package com.limpidfox;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 
 public class HP97ProgramRepo 
@@ -78,7 +75,6 @@ public class HP97ProgramRepo
 			out.println("</HP97Program>");
 			out.close();
 		} catch (FileNotFoundException e) {
-			String msg = e.getMessage();
 		}
     }
     

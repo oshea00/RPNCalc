@@ -2908,7 +2908,6 @@ public class HP97 extends RPNCalculator
 			String key1;
 			String key2;
 			String key3;
-			int i;
 			// Build keycode search
 			if (_gotoFKeyLabel == true)
 			{
@@ -4214,7 +4213,6 @@ public class HP97 extends RPNCalculator
 			String key1;
 			String key2;
 			String key3;
-			int i;
 			// Build keycode search
 			if (_gotoFKeyLabel == true)
 			{
@@ -6215,7 +6213,6 @@ public class HP97 extends RPNCalculator
 		isEnteringData = false;
 		double saveX = GetX();
 		autolift = true;
-		String line;
 		if (GetHP67PrintMode())
 		{
 			SetStopPrint(false);

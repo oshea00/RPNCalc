@@ -20,7 +20,7 @@
     android:text=" 0.00"
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
-    android:layout_marginLeft="50dp"
+    android:layout_marginLeft="38dp"
     android:layout_marginTop="30dp"
  />
  <Button
@@ -164,7 +164,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="41dp"
-    android:layout_marginTop="268dp"
+    android:layout_marginTop="266dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -173,7 +173,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="143dp"
-    android:layout_marginTop="268dp"
+    android:layout_marginTop="266dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -182,7 +182,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="194dp"
-    android:layout_marginTop="268dp"
+    android:layout_marginTop="266dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -191,7 +191,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="245dp"
-    android:layout_marginTop="268dp"
+    android:layout_marginTop="266dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -200,7 +200,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="41dp"
-    android:layout_marginTop="308dp"
+    android:layout_marginTop="306dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -209,7 +209,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="92dp"
-    android:layout_marginTop="308dp"
+    android:layout_marginTop="306dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -218,7 +218,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="165dp"
-    android:layout_marginTop="308dp"
+    android:layout_marginTop="306dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -227,7 +227,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="239dp"
-    android:layout_marginTop="308dp"
+    android:layout_marginTop="306dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -236,7 +236,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="41dp"
-    android:layout_marginTop="351dp"
+    android:layout_marginTop="348dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -245,7 +245,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="92dp"
-    android:layout_marginTop="351dp"
+    android:layout_marginTop="348dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -254,7 +254,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="165dp"
-    android:layout_marginTop="351dp"
+    android:layout_marginTop="348dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -263,7 +263,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="239dp"
-    android:layout_marginTop="351dp"
+    android:layout_marginTop="348dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -272,7 +272,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="41dp"
-    android:layout_marginTop="394dp"
+    android:layout_marginTop="392dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -281,7 +281,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="92dp"
-    android:layout_marginTop="394dp"
+    android:layout_marginTop="392dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -290,7 +290,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="165dp"
-    android:layout_marginTop="394dp"
+    android:layout_marginTop="392dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -299,7 +299,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="239dp"
-    android:layout_marginTop="394dp"
+    android:layout_marginTop="392dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -308,7 +308,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="41dp"
-    android:layout_marginTop="439dp"
+    android:layout_marginTop="435dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -317,7 +317,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="92dp"
-    android:layout_marginTop="439dp"
+    android:layout_marginTop="435dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -326,7 +326,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="165dp"
-    android:layout_marginTop="439dp"
+    android:layout_marginTop="435dp"
     android:onClick="btnPressed"
  />
  <Button
@@ -335,7 +335,7 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_marginLeft="239dp"
-    android:layout_marginTop="439dp"
+    android:layout_marginTop="435dp"
     android:onClick="btnPressed"
  />
  <CheckBox
@@ -343,8 +343,8 @@
     style="@style/slideButton"
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
-    android:layout_marginLeft="218dp"
-    android:layout_marginTop="78dp"
+    android:layout_marginLeft="215dp"
+    android:layout_marginTop="76dp"
     android:onClick="btnPressed"
  />
  <ImageView
@@ -352,9 +352,9 @@
     android:layout_alignParentLeft="true"
     android:layout_alignParentTop="true"
     android:layout_width="260dp"
-    android:layout_height="48dp"
+    android:layout_height="50dp"
     android:layout_marginLeft="30dp"
-    android:layout_marginTop="91dp"
+    android:layout_marginTop="87dp"
     android:src="@drawable/card"
  />
  <TextView

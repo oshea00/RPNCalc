@@ -1,9 +1,9 @@
 package com.limpidfox;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
 import android.graphics.Typeface;
 import java.util.*;
 import android.os.Bundle;
@@ -18,12 +18,13 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Button;
 import java.io.*;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 import android.content.res.*;
 
@@ -39,8 +40,12 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
     public static final int ACTION_SELECTED=1;
     public static final int ACTION_SAVE=2;
     float dpi = 0;
+    float scalew = 1;
+    float scaleh = 1;
     int display_width = 0;
     int display_height = 0;
+    
+    
     
 	 Handler mHandler = new Handler();
 	List<String> _btnNames;
@@ -71,19 +76,69 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
         unpackPrograms();
     }
     
+ // Cope with deprecated getWidth() and getHeight() methods
+    Point getSize(Display xiDisplay) 
+    {
+      Point outSize = new Point();
+      boolean sizeFound = false;
+
+      try 
+      {
+        // Test if the new getSize() method is available
+        Method newGetSize = 
+          Display.class.getMethod("getSize", new Class[] { Point.class });
+
+        // No exception, so the new method is available
+        Log.d("Calculator", "Use getSize to find screen size");
+        newGetSize.invoke(xiDisplay, outSize);
+        sizeFound = true;
+        Log.d("Calculator", "Screen size is " + outSize.x + " x " + outSize.y);
+      } 
+      catch (NoSuchMethodException ex) 
+      {
+        // This is the failure I expect when the deprecated APIs are not available
+        Log.d("Calculator", "getSize not available - NoSuchMethodException");
+      }  
+      catch (InvocationTargetException e) 
+      {
+        Log.w("Calculator", "getSize not available - InvocationTargetException");
+      } 
+      catch (IllegalArgumentException e) 
+      {
+        Log.w("Calculator", "getSize not available - IllegalArgumentException");
+      } 
+      catch (IllegalAccessException e) 
+      {
+        Log.w("Calculator", "getSize not available - IllegalAccessException");
+      }
+
+      if (!sizeFound)
+      {
+        Log.i("Calculator", "Used deprecated methods as getSize not available");
+        outSize = new Point(xiDisplay.getWidth(), xiDisplay.getHeight());
+      }
+
+      return outSize;
+    }
+    
     public void logDisplayMetrics()
     {
         int sizeMask = this.getResources().getConfiguration().screenLayout;
+        int orientation = this.getResources().getConfiguration().orientation;
         Display disp = getWindowManager().getDefaultDisplay();
+        Point size = getSize(disp);
         DisplayMetrics dm = new DisplayMetrics();
         disp.getMetrics(dm);
 
         dpi = dm.density;
-        display_width = disp.getWidth();
-        display_height = disp.getHeight();
+        display_width = size.x;
+        display_height = size.y;
         int density = dm.densityDpi;
+		scalew = display_width/((float)320*dpi);
+		scaleh = display_height/((float)528*dpi);
         String densityString = null;
 
+        
         if(density == DisplayMetrics.DENSITY_HIGH) {
             densityString = "HDPI";
         } else if(density == DisplayMetrics.DENSITY_XHIGH) {
@@ -92,8 +147,11 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
             densityString = "MDPI";
         } else if(density == DisplayMetrics.DENSITY_LOW) {
             densityString = "LDPI";
+        } else {
+            densityString = "OTHER";
         }
-        Log.d("Calculator",String.format("density=%s dpi=%f layout mask %02X Width=%d Height=%d",densityString,dpi,sizeMask,display_width,display_height));
+        
+        Log.d("Calculator",String.format("orient=%d density=%s dpi=%f layout mask %02X Width=%d Height=%d ScaleW=%f ScaleH=%f",orientation,densityString,dpi,sizeMask,display_width,display_height,scalew,scaleh));
     }
     
     public void adjustMainLayout(RelativeLayout m)
@@ -108,15 +166,11 @@ public class Calculator extends Activity implements IDisplayUpdateHandler, IWrit
     			c.getId()==R.id.card ||
     			c.getId()==R.id.btnPgm)
     		{
-    			float dh = display_height;
-    			float dw = display_width;
-    			float sw = (dw/dpi)/320;
-    			float sh = (dh/dpi)/533;
     			RelativeLayout.LayoutParams p = (RelativeLayout.LayoutParams) c.getLayoutParams();
-    			p.leftMargin = (int) (p.leftMargin*sw);
-    			p.width = (int) (p.width*sw);
-    			p.topMargin = (int) (p.topMargin*sh);
-    			p.height = (int) (p.height*sh);
+    			p.leftMargin = (int) (p.leftMargin*scalew);
+    			p.width = (int) (p.width*scalew);
+    			p.topMargin = (int) (p.topMargin*scaleh);
+    			p.height = (int) (p.height*scaleh);
     		}
     	}
     }

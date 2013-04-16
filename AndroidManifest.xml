@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.limpidfox"
-      android:versionCode="3"
-      android:versionName="1.0">
-    <supports-screens android:largeScreens="true" android:xlargeScreens="false" android:normalScreens="true" android:smallScreens="false"/>
+      android:versionCode="11"
+      android:versionName="2.4">
+    <supports-screens android:largeScreens="true" android:xlargeScreens="true" android:normalScreens="true" android:smallScreens="false"/>
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-sdk android:minSdkVersion="10" android:targetSdkVersion="10"/>

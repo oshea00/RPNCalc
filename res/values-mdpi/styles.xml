@@ -10,19 +10,19 @@
       <item name="android:background">@drawable/calc_button</item>
     </style>
     <style name="slideButton">
-      <item name="android:layout_width">75dp</item>
-      <item name="android:layout_height">20dp</item>
+      <item name="android:layout_width">45dp</item>
+      <item name="android:layout_height">15dp</item>
       <item name="android:textSize">20dp</item>
       <item name="android:textColor">#FFFFFF</item>
       <item name="android:checked">false</item>
       <item name="android:button">@drawable/slide_button</item>
     </style>
     <style name="calcDisplay">
-      <item name="android:layout_width">245dp</item>
+      <item name="android:layout_width">235dp</item>
       <item name="android:layout_height">30dp</item>
       <item name="android:background">#300000</item>
       <item name="android:textColor">#ff0000</item>
-      <item name="android:textSize">22sp</item>
+      <item name="android:textSize">27sp</item>
       <item name="android:gravity">left</item>
     </style>
     <style name="pgmName">
@@ -41,17 +41,17 @@
     </style>
     <style name="calcBtnMed">
       <item name="android:layout_width">30dp</item>
-      <item name="android:layout_height">22dp</item>
+      <item name="android:layout_height">26dp</item>
       <item name="android:background">@drawable/calc_button</item>
     </style>
     <style name="calcBtnLg">
       <item name="android:layout_width">80dp</item>
-      <item name="android:layout_height">22dp</item>
+      <item name="android:layout_height">26dp</item>
       <item name="android:background">@drawable/calc_button</item>
     </style>
     <style name="calcBtnDig">
       <item name="android:layout_width">38dp</item>
-      <item name="android:layout_height">22dp</item>
+      <item name="android:layout_height">26dp</item>
       <item name="android:background">@drawable/calc_button</item>
     </style>
      

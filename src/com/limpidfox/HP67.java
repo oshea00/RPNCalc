@@ -87,7 +87,6 @@ public class HP67
 	public void ProcessKeyInput2(String name)
 	{
 		ArrayList<String> hits;
-		ArrayList<String> keysFor97 = new ArrayList<String>(3);
 		String keyCode = ExtractKeyCode(name);
 		SetStopPrint(true);
 
